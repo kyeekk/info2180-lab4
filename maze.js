@@ -6,15 +6,22 @@ window.onload = () =>{
     let start = document.getElementById("start");
     let maze  = document.getElementById("maze");
     let end = document.getElementById("end");
+    let collision = 0;
 
     bound1.addEventListener("mouseover", youLose);
 
     boundary.forEach(b => {b.addEventListener("mouseover", youLose)});
     
     function youLose (){
+        collision++;
         this.classList.add("youlose");
     }
+
+    end.addEventListener("mouseover", youWin);
     
+    function youWin(){
+        window.alert("You win!")};
+    }
 
 }
  
