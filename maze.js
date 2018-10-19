@@ -7,13 +7,14 @@ window.onload = () =>{
     let maze  = document.getElementById("maze");
     let end = document.getElementById("end");
 
-    bound1.addEventListener("mouseover", youLose)
+    bound1.addEventListener("mouseover", youLose);
 
+    boundary.forEach(b => {b.addEventListener("mouseover", youLose)});
+    
     function youLose (){
         this.classList.add("youlose");
     }
-
-    boundary.forEach( b => {b.addEventListener("mouseover", youLose)});
     
+
 }
  
