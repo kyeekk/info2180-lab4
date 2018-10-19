@@ -20,7 +20,9 @@ window.onload = () =>{
     end.addEventListener("mouseover", youWin);
     
     function youWin(){
-        window.alert("You win!")};
+        if (collision < 1){
+            window.alert("You win!");
+        }
     }
 
 }
