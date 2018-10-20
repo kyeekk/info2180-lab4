@@ -25,5 +25,11 @@ window.onload = () =>{
         }
     }
 
+    start.addEventListener("click", restart);
+
+    function restart(){
+        boundary.forEach(b => {b.classList.remove("youlose")});
+    }
+
 }
  
