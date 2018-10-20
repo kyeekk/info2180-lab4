@@ -36,5 +36,11 @@ window.onload = () =>{
         document.getElementById("status").innerHTML = "Move your mouse over the 'S' to begin.";
     }
 
+    maze.addEventListener("mouseleave", cheating);
+
+    function cheating(){
+        document.getElementById("status").innerHTML = "mouse outside maze <br> YOU CHEATED YOU LOSE!";
+    }
+
 }
  
