@@ -21,14 +21,19 @@ window.onload = () =>{
     
     function youWin(){
         if (collision < 1){
-            window.alert("You win!");
+            document.getElementById("status").innerHTML = "YOU WIN!";
         }
+        else(
+            document.getElementById("status").innerHTML = "YOU LOSE!"
+        )
     }
 
     start.addEventListener("click", restart);
 
     function restart(){
         boundary.forEach(b => {b.classList.remove("youlose")});
+        collision=0;
+        document.getElementById("status").innerHTML = "Move your mouse over the 'S' to begin.";
     }
 
 }
